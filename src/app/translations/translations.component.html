@@ -1,0 +1,15 @@
+<h3>Список ранее переведенных текстов</h3>
+
+<div style="margin-bottom: 1em">
+  <mat-card class="card">
+    <mat-selection-list> <!--  [multiple]="false" -->
+      <mat-list-option
+        *ngFor="let translation of translations"
+        [value]="translation.id"
+        [routerLink]="'/translation/' + translation.id"
+      >
+        {{ translation.text }}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-card>
+</div>

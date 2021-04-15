@@ -1,0 +1,15 @@
+<h3>Просмотр переведенного текста</h3>
+
+<div *ngIf="translation">
+  <app-translation-detail
+    [languageCode]="translation.source"
+    [title]="'Исходный текст'"
+    [text]="translation.text"
+  ></app-translation-detail>
+
+  <app-translation-detail
+    [languageCode]="translation.target"
+    [title]="'Перевод'"
+    [text]="translation.translatedText"
+  ></app-translation-detail>
+</div>

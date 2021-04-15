@@ -1,0 +1,15 @@
+.inline-block {
+  display: inline-block;
+}
+.full-width {
+  width: 100%;
+}
+.align-right {
+  text-align: right;
+}
+/*.option-flag {*/
+/*  vertical-align: middle;*/
+/*  width: 20px;*/
+/*  height: 20px;*/
+/*  margin-right: 5px;*/
+/*}*/
