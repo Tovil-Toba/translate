@@ -1,0 +1,19 @@
+.example-icon {
+  padding: 0 14px;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.logo {
+  width: 37px;
+  height: 40px;
+  padding-right: 8px;
+}
+.active {
+  /*opacity: 0.7;*/
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 0.5em;
+}
