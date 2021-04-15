@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core'
+import { Routes, RouterModule } from '@angular/router'
 
 import { TranslationFormComponent } from './translation-form/translation-form.component'
 import { TranslationComponent } from './translation/translation.component'
