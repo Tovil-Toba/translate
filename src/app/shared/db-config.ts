@@ -1,6 +1,6 @@
 import { DBConfig } from 'ngx-indexed-db'
 
-export const dbConfig: DBConfig = {
+export const DB_CONFIG: DBConfig = {
   name: 'TranslationsDb',
   version: 1,
   objectStoresMeta: [

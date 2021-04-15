@@ -3,7 +3,7 @@
   <mat-select [formControl]="formControl">
     <mat-option *ngFor="let language of languages$ | async" [value]="language.language">
       <img
-        [src]="'../../assets/flags/' + language.language + '.png'"
+        [src]="'/assets/flags/' + language.language + '.png'"
         class="option-flag"
         [alt]="language.name || language.language"
       >

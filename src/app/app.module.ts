@@ -20,9 +20,10 @@ import { TranslationsComponent } from './translations/translations.component'
 import { TranslationComponent } from './translation/translation.component'
 import { TranslationFormComponent } from './translation-form/translation-form.component'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
-import { dbConfig } from './shared/db-config';
 import { TranslationDetailComponent } from './translation/translation-detail/translation-detail.component';
 import { LanguagesSelectComponent } from './translation-form/languages-select/languages-select.component'
+
+import { DB_CONFIG } from './shared/db-config';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,7 @@ import { LanguagesSelectComponent } from './translation-form/languages-select/la
     MatCardModule,
     MatListModule,
     MatGridListModule,
-    NgxIndexedDBModule.forRoot(dbConfig)
+    NgxIndexedDBModule.forRoot(DB_CONFIG)
   ],
   providers: [],
   bootstrap: [AppComponent]

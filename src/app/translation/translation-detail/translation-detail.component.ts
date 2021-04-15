@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core'
 import { Observable } from 'rxjs'
-import { Translation } from '../../shared/translation.model'
 import { Language } from '../../shared/language.model'
 import { TranslationService } from '../../shared/translation.service'
 
