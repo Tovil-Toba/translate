@@ -21,7 +21,7 @@ export class TranslationDetailComponent implements OnInit {
   }
 
   get flagBackgroundImage(): string {
-    return `url('../../assets/flags/${this.languageCode}.png')`
+    return `url('/assets/flags/${this.languageCode}.png')`
   }
 
   get languageByCode(): Observable<Language> {

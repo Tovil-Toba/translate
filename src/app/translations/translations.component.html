@@ -2,13 +2,20 @@
 
 <div style="margin-bottom: 1em">
   <mat-card class="card">
-    <mat-selection-list> <!--  [multiple]="false" -->
+    <mat-selection-list [multiple]="false">
       <mat-list-option
         *ngFor="let translation of translations"
         [value]="translation.id"
         [routerLink]="'/translation/' + translation.id"
       >
-        {{ translation.text }}
+        <mat-list-item style="padding: 0!important;">
+          <div
+            mat-list-avatar
+            [style.background-image]="'url(\'/assets/flags/' + translation.source + '.png\')'"
+            class="avatar-image"
+          ></div>
+          <div mat-line style="padding: 0!important;">{{ translation.text }}</div>
+        </mat-list-item>
       </mat-list-option>
     </mat-selection-list>
   </mat-card>
