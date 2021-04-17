@@ -14,14 +14,14 @@ export class TranslationsComponent implements OnInit {
 
   constructor(private translationService: TranslationService) { }
 
-  ngOnInit() {
-    this.getTranslations()
-  }
-
   getTranslations(): void {
     this.translationService.getTranslations()
       .subscribe((translations: Translation[]) => {
         this.translations = translations
       })
+  }
+
+  ngOnInit() {
+    this.getTranslations()
   }
 }

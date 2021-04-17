@@ -20,8 +20,8 @@ export class TranslationFormComponent implements OnInit {
   textControl = new FormControl('')
 
   constructor(
-    private translationService: TranslationService,
     private dbService: NgxIndexedDBService,
+    private translationService: TranslationService,
     private router: Router
   ) {
     this.form = new FormGroup({
@@ -32,14 +32,6 @@ export class TranslationFormComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
-
-  swapLanguages(event: Event): void {
-    event.preventDefault()
-    const target = this.targetControl.value
-    const source = this.sourceControl.value
-    this.sourceControl.setValue(target)
-    this.targetControl.setValue(source)
   }
 
   onSubmit(): void {
@@ -53,5 +45,13 @@ export class TranslationFormComponent implements OnInit {
             this.router.navigate(['/translation', id])
           })
       })
+  }
+
+  swapLanguages(event: Event): void {
+    event.preventDefault()
+    const target = this.targetControl.value
+    const source = this.sourceControl.value
+    this.sourceControl.setValue(target)
+    this.targetControl.setValue(source)
   }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core'
 import { FormControl } from '@angular/forms'
-
 import { Observable } from 'rxjs'
+
 import { Language } from '../../shared/language.model'
 import { TranslationService } from '../../core/translation.service'
 
@@ -22,5 +22,4 @@ export class LanguagesSelectComponent implements OnInit {
   ngOnInit() {
     this.languages$ = this.translationService.languages
   }
-
 }

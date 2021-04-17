@@ -17,14 +17,14 @@ export class TranslationDetailComponent implements OnInit {
 
   constructor(private translationService: TranslationService) { }
 
-  ngOnInit() {
-  }
-
   get flagBackgroundImage(): string {
     return `url('/assets/flags/${this.languageCode}.png')`
   }
 
   get languageByCode(): Observable<Language> {
     return this.translationService.getLanguageByCode(this.languageCode)
+  }
+
+  ngOnInit() {
   }
 }

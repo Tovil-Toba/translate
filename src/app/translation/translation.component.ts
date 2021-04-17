@@ -18,15 +18,15 @@ export class TranslationComponent implements OnInit {
     private activatedRoute: ActivatedRoute
   ) { }
 
-  ngOnInit() {
-    const translationId = Number(this.activatedRoute.snapshot.paramMap.get('id'))
-    this.getTranslationById(translationId)
-  }
-
   getTranslationById(id: number): void {
     this.translationService.getTranslationById(id)
       .subscribe((translation: Translation) => {
         this.translation = translation
       })
+  }
+
+  ngOnInit() {
+    const translationId = Number(this.activatedRoute.snapshot.paramMap.get('id'))
+    this.getTranslationById(translationId)
   }
 }

@@ -16,10 +16,12 @@ import { API_KEY } from '../shared/constants'
   providedIn: 'root'
 })
 export class TranslationService {
+
+  translations: Translation[] = []
+
   private readonly API_URL: string = `https://translation.googleapis.com/language/translate/v2`
   private readonly LANGUAGES_URL: string = `${this.API_URL}/languages`
   private languages$: Observable<Language[]>
-  translations: Translation[] = []
 
   constructor(
     private http: HttpClient,
@@ -44,15 +46,12 @@ export class TranslationService {
     )
   }
 
-  private requestLanguages(target: string = 'ru'): Observable<Language[]>  {
-    const params: LanguagesParams = {
-      key: API_KEY,
-      target
-    }
-    return this.http.get<LanguagesResponse>(this.LANGUAGES_URL, { params })
-      .pipe(
-        map((response: LanguagesResponse): Language[] => response.data.languages)
-      )
+  getTranslations(): Observable<Translation[]> {
+    return this.dbService.getAll('translations')
+  }
+
+  getTranslationById(id: number): Observable<Translation> {
+    return this.dbService.getByKey('translations', id)
   }
 
   translate(translation: Translation): Observable<TranslationResponse> {
@@ -65,11 +64,14 @@ export class TranslationService {
     return this.http.post<TranslationResponse>(this.API_URL, null,{ params })
   }
 
-  getTranslations(): Observable<Translation[]> {
-    return this.dbService.getAll('translations')
-  }
-
-  getTranslationById(id: number): Observable<Translation> {
-    return this.dbService.getByKey('translations', id)
+  private requestLanguages(target: string = 'ru'): Observable<Language[]>  {
+    const params: LanguagesParams = {
+      key: API_KEY,
+      target
+    }
+    return this.http.get<LanguagesResponse>(this.LANGUAGES_URL, { params })
+      .pipe(
+        map((response: LanguagesResponse): Language[] => response.data.languages)
+      )
   }
 }
