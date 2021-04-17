@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core'
 import { Observable } from 'rxjs'
+
+import { TranslationService } from '../../core/translation.service'
 import { Language } from '../../shared/language.model'
-import { TranslationService } from '../../shared/translation.service'
 
 @Component({
   selector: 'app-translation-detail',

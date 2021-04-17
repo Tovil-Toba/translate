@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core'
 import { FormControl, FormGroup } from '@angular/forms'
-import { NgxIndexedDBService } from 'ngx-indexed-db'
 import { Router } from '@angular/router'
+import { NgxIndexedDBService } from 'ngx-indexed-db'
 
-import { TranslationService } from '../shared/translation.service'
+import { TranslationService } from '../core/translation.service'
 import { Translation } from '../shared/translation.model'
 import { TranslationResponse } from '../shared/translation-response.model'
 

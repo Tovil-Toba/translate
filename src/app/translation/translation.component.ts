@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core'
-import { TranslationService } from '../shared/translation.service'
-import { Translation } from '../shared/translation.model'
 import { ActivatedRoute } from '@angular/router'
+
+import { TranslationService } from '../core/translation.service'
+import { Translation } from '../shared/translation.model'
 
 @Component({
   selector: 'app-translation',

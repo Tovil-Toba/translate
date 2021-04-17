@@ -1,8 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core'
+import { FormControl } from '@angular/forms'
+
 import { Observable } from 'rxjs'
 import { Language } from '../../shared/language.model'
-import { TranslationService } from '../../shared/translation.service'
-import { FormControl } from '@angular/forms'
+import { TranslationService } from '../../core/translation.service'
 
 @Component({
   selector: 'app-languages-select',

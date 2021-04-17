@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 
-import { TranslationService } from '../shared/translation.service'
+import { TranslationService } from '../core/translation.service'
 import { Translation } from '../shared/translation.model'
 
 @Component({
