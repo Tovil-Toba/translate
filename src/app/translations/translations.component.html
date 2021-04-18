@@ -11,7 +11,7 @@
         <mat-list-item style="padding: 0!important;">
           <div
             mat-list-avatar
-            [style.background-image]="'url(\'/assets/flags/' + translation.source + '.png\')'"
+            [style.background-image]="getFlagBackgroundImage(translation.source)"
             class="avatar-image"
           ></div>
           <div mat-line style="padding: 0!important;">{{ translation.text }}</div>

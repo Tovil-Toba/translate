@@ -14,6 +14,10 @@ export class TranslationsComponent implements OnInit {
 
   constructor(private translationService: TranslationService) { }
 
+  getFlagBackgroundImage(languageCode: string): string {
+    return `url('/assets/flags/${languageCode}.png')`
+  }
+
   getTranslations(): void {
     this.translationService.getTranslations()
       .subscribe((translations: Translation[]) => {
